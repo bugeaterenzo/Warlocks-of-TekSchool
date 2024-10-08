@@ -17,11 +17,11 @@ public class Main {
         DataManager dataManager = new DataManager();
 
         // Create students
-        Student gradStudent = new GraduateStudent("G001", "Alice", "alice@example.com", "1234567890");
-        Student undergradStudent = new UndergraduateStudent("U001", "Bob", "bob@example.com", "0987654321");
+        Student Alice = new GraduateStudent("G001", "Alice", "alice@example.com", "1234567890");
+        Student Bob = new UndergraduateStudent("U001", "Bob", "bob@example.com", "0987654321");
 
-        dataManager.addStudent(gradStudent);
-        dataManager.addStudent(undergradStudent);
+        dataManager.addStudent(Alice);
+        dataManager.addStudent(Bob);
 
         // Create courses
         Course mandatoryCourse = new MandatoryCourse("C001", "Data Structures", 4);
@@ -32,10 +32,10 @@ public class Main {
 
         // Enroll students
         CourseEnrollment enrollment1 = new CourseEnrollment(mandatoryCourse);
-        enrollment1.enrollStudent(gradStudent);
+        enrollment1.enrollStudent(Alice);
 
         CourseEnrollment enrollment2 = new CourseEnrollment(electiveCourse);
-        enrollment2.enrollStudent(undergradStudent);
+        enrollment2.enrollStudent(Bob);
 
 
 
@@ -45,20 +45,20 @@ public class Main {
 
 
         // Display Enrolled Courses
-        gradStudent.displayEnrolledCourses();
+        Alice.displayEnrolledCourses();
         System.out.println("\n");
 
         // Display Enrolled Courses
-        undergradStudent.displayEnrolledCourses();
+        Bob.displayEnrolledCourses();
         System.out.println("\n");
 
 
         // Get Student Info
-        gradStudent.displayInfo();
+        Alice.displayInfo();
         System.out.println("\n");
 
         // Get Student Info
-        undergradStudent.displayInfo();
+        Bob.displayInfo();
         System.out.println("\n");
 
         // Display Enrolled Students
@@ -76,9 +76,9 @@ public class Main {
         // Display all courses
         dataManager.displayAllCourses();
 
+
         // Search Student by id
         System.out.println(dataManager.getStudentById("G001"));
-
         // Search Student by id
         System.out.println(dataManager.getStudentById("U001"));
 
