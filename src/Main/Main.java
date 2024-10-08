@@ -44,9 +44,6 @@ public class Main {
         electiveCourse.setGrade(4.0);
 
 
-        gradStudent.addCourse(mandatoryCourse);
-        gradStudent.addCourse(electiveCourse);
-
         // Display Enrolled Courses
         gradStudent.displayEnrolledCourses();
         System.out.println("\n");
@@ -78,6 +75,14 @@ public class Main {
 
         // Display all courses
         dataManager.displayAllCourses();
+
+        // Search Student by id
+        System.out.println(dataManager.getStudentById("G001"));
+
+        // Search Student by id
+        System.out.println(dataManager.getStudentById("U001"));
+
+
     }
 
 }
