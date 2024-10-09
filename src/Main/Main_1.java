@@ -10,7 +10,7 @@ import Student.GraduateStudent;
 import Student.UndergraduateStudent;
 
 
-public class Main {
+public class Main_1 {
 
 
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class Main {
         // Enroll students
         CourseEnrollment enrollment1 = new CourseEnrollment();
         enrollment1.enrollStudent(Data_Structures, Alice );
-        enrollment1.enrollStudent(Data_Structures, Alice );
+        enrollment1.enrollStudent(Data_Structures, Alice ); // This should not work...!
         enrollment1.removeStudent(Art_History, Alice );
 
         CourseEnrollment enrollment2 = new CourseEnrollment();
