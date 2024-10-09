@@ -31,12 +31,12 @@ public class Main {
         dataManager.addCourse(Art_History);
 
         // Enroll students
-        CourseEnrollment enrollment1 = new CourseEnrollment(Data_Structures);
+        CourseEnrollment enrollment1 = new CourseEnrollment();
         enrollment1.enrollStudent(Data_Structures, Alice );
         enrollment1.enrollStudent(Data_Structures, Alice );
         enrollment1.removeStudent(Art_History, Alice );
 
-        CourseEnrollment enrollment2 = new CourseEnrollment(Art_History);
+        CourseEnrollment enrollment2 = new CourseEnrollment();
         enrollment2.enrollStudent(Data_Structures, Bob );
 
 
@@ -67,11 +67,11 @@ public class Main {
         System.out.println("\n");
 
         // Display Enrolled Students
-        enrollment1.displayEnrolledStudents();
+        enrollment1.displayEnrolledStudents(Data_Structures);
         System.out.println("\n");
 
         // Display Enrolled Students
-        enrollment2.displayEnrolledStudents();
+        enrollment2.displayEnrolledStudents(Art_History);
         System.out.println("\n");
 
 

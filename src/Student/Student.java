@@ -29,12 +29,24 @@ public class Student {
         return name;
     }
 
+    // Add the course to the student's list of courses
     public void addCourse(Course course) {
-        enrolledCourses.add(course);
+        if (!enrolledCourses.contains(course)) {
+            enrolledCourses.add(course);
+            System.out.printf(" %s has been added to %s's enrolled courses.\n", course.getCourseName(), this.name);
+        } else {
+            System.out.printf(" %s is already enrolled in %s's course list.\n", course.getCourseName(), this.name);
+        }
     }
 
+    // Remove the course from the student's list of courses
     public void removeCourse(Course course) {
-        enrolledCourses.remove(course);
+        if (enrolledCourses.contains(course)) {
+            enrolledCourses.remove(course);
+            System.out.printf(" %s has been removed from %s's enrolled courses.\n", course.getCourseName(), this.name);
+        } else {
+            System.out.printf(" %s was not found in %s's enrolled courses.\n", course.getCourseName(), this.name);
+        }
     }
 
     // Calculate GPA based on courses and their grades

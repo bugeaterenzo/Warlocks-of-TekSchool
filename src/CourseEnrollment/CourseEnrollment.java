@@ -8,11 +8,11 @@ import java.util.HashMap;
 
 public class CourseEnrollment {
 
-    private Course course;
+
     private HashMap<String, Student> enrolledStudents; // Map to hold courseId (String) and Student
 
-    public CourseEnrollment(Course course) {
-        this.course = course;
+
+    public CourseEnrollment() {
         this.enrolledStudents = new HashMap<>();
     }
 
@@ -50,7 +50,7 @@ public class CourseEnrollment {
     }
 
 
-    public void displayEnrolledStudents() {
+    public void displayEnrolledStudents(Course course) {
         System.out.println("Students enrolled in " + course.getCourseName() + ":");
         for (Student student : enrolledStudents.values()) {
             System.out.println("- " + student.getName());
