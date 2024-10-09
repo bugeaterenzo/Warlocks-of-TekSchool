@@ -72,8 +72,13 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student ID: " + studentId + ", Name: " + name;
+        return "Student{id='" + studentId +
+                "', name='" + name +
+                "', email='" + email +
+                "', phone='" + phoneNumber +
+                "', GPA=" + calculateGPA() + "}";
     }
+
 
 
 

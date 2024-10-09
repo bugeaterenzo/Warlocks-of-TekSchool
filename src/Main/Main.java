@@ -24,24 +24,29 @@ public class Main {
         dataManager.addStudent(Bob);
 
         // Create courses
-        Course mandatoryCourse = new MandatoryCourse("C001", "Data Structures", 4);
-        Course electiveCourse = new ElectiveCourse("C002", "Art History", 3);
+        Course Data_Structures  = new MandatoryCourse("C001", "Data Structures", 4);
+        Course Art_History  = new ElectiveCourse("C002", "Art History", 3);
 
-        dataManager.addCourse(mandatoryCourse);
-        dataManager.addCourse(electiveCourse);
+        dataManager.addCourse(Data_Structures);
+        dataManager.addCourse(Art_History);
 
         // Enroll students
-        CourseEnrollment enrollment1 = new CourseEnrollment(mandatoryCourse);
-        enrollment1.enrollStudent(Alice);
+        CourseEnrollment enrollment1 = new CourseEnrollment(Data_Structures);
+        enrollment1.enrollStudent(Data_Structures, Alice );
+        enrollment1.enrollStudent(Data_Structures, Alice );
+        enrollment1.removeStudent(Art_History, Alice );
 
-        CourseEnrollment enrollment2 = new CourseEnrollment(electiveCourse);
-        enrollment2.enrollStudent(Bob);
+        CourseEnrollment enrollment2 = new CourseEnrollment(Art_History);
+        enrollment2.enrollStudent(Data_Structures, Bob );
 
 
 
         // Set grades
-        mandatoryCourse.setGrade(3.5);
-        electiveCourse.setGrade(4.0);
+        Data_Structures.setGrade(3.5);
+        Art_History.setGrade(4.0);
+
+
+        System.out.println();
 
 
         // Display Enrolled Courses
@@ -81,6 +86,20 @@ public class Main {
         System.out.println(dataManager.getStudentById("G001"));
         // Search Student by id
         System.out.println(dataManager.getStudentById("U001"));
+
+        System.out.println();
+
+        // Search Course by id
+        System.out.println(dataManager.getCourseById("C001"));
+        // Search Course by id
+        System.out.println(dataManager.getCourseById("C002"));
+
+        System.out.println();
+
+        // Get Student Map
+        dataManager.displayStudentMap();
+        // Get Course Map
+        dataManager.displayCourseMap();
 
 
     }
