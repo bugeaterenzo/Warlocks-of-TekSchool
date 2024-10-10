@@ -7,16 +7,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DataManager {
-    private ArrayList<Student> students;
-    private ArrayList<Course> courses;
-    private HashMap<String, Student> studentMap;
-    private HashMap<String, Course> courseMap;
+    private static ArrayList<Student> students = new ArrayList<>();
+    private static ArrayList<Course> courses = new ArrayList<>();
+    private static HashMap<String, Student> studentMap = new HashMap<>();
+    private static HashMap<String, Course> courseMap = new HashMap<>();
 
     public DataManager() {
-        students = new ArrayList<>();
-        courses = new ArrayList<>();
-        studentMap = new HashMap<>();
-        courseMap = new HashMap<>();
     }
 
 
